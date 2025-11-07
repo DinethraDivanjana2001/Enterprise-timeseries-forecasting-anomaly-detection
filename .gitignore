@@ -1,7 +1,185 @@
+# ==============================================================================
+# Python
+# ==============================================================================
 __pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
 *.pyc
+
+# ==============================================================================
+# Virtual Environments (IMPORTANT: Never commit these!)
+# ==============================================================================
+venv/
+env/
+ENV/
+.venv
+env.bak/
+venv.bak/
+
+# ==============================================================================
+# IDE and Editor Files
+# ==============================================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings/
+
+# ==============================================================================
+# Jupyter Notebook
+# ==============================================================================
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+**/.ipynb_checkpoints/
+
+# ==============================================================================
+# Environment Variables and Secrets
+# ==============================================================================
 .env
-data/raw/
-data/processed/
-models/
-outputs/
+.env.local
+.env.*.local
+*.env
+
+# ==============================================================================
+# Data Files (Keep directory structure, ignore large data files)
+# ==============================================================================
+# Ignore all CSV files in data directory
+data/*.csv
+data/*.parquet
+data/*.xlsx
+data/*.json
+data/raw/*
+data/processed/*
+
+# Keep directory structure
+!data/.gitkeep
+!data/raw/.gitkeep
+!data/processed/.gitkeep
+
+# Exception: Allow a small sample file for demonstration (if you create one)
+# !data/sample_data.csv
+
+# ==============================================================================
+# Model Artifacts (These can be large - regenerate from code)
+# ==============================================================================
+models/*.pkl
+models/*.joblib
+models/*.h5
+models/*.hdf5
+models/*.pt
+models/*.pth
+models/*.ckpt
+models/*.pb
+models/*.onnx
+
+# Keep directory structure
+!models/.gitkeep
+
+# ==============================================================================
+# Output Files (Predictions, Results, etc.)
+# ==============================================================================
+outputs/*.csv
+outputs/*.json
+outputs/*.pkl
+outputs/*.txt
+
+# Keep directory structure
+!outputs/.gitkeep
+
+# ==============================================================================
+# Reports and Visualizations
+# ==============================================================================
+reports/*.png
+reports/*.jpg
+reports/*.jpeg
+reports/*.pdf
+reports/*.csv
+reports/*.html
+
+# Keep directory structure
+!reports/.gitkeep
+
+# Exception: Allow one sample visualization for README (if you create one)
+# !reports/sample_forecast.png
+
+# ==============================================================================
+# Operating System Files
+# ==============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ==============================================================================
+# Testing and Coverage
+# ==============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+.hypothesis/
+.tox/
+nosetests.xml
+coverage.xml
+*.log
+
+# ==============================================================================
+# Distribution and Packaging
+# ==============================================================================
+dist/
+build/
+*.egg-info/
+*.egg
+wheels/
+pip-wheel-metadata/
+*.manifest
+*.spec
+
+# ==============================================================================
+# Logs and Temporary Files
+# ==============================================================================
+*.log
+*.tmp
+*.temp
+logs/
+*.out
+
+# ==============================================================================
+# Documentation (Keep only README.md for GitHub)
+# ==============================================================================
+# Ignore all markdown files
+*.md
+
+# Exception: Allow README.md for GitHub
+!README.md
+
+# ==============================================================================
+# Project-Specific
+# ==============================================================================
+# Uncomment if you want to ignore specific notebooks
+# notebooks/scratch*.ipynb
+# notebooks/temp*.ipynb
+
+# Temporary experiment files
+experiments/
+scratch/
+temp/

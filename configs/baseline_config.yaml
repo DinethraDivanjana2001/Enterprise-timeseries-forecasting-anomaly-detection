@@ -1,0 +1,9 @@
+# Baseline model configuration
+
+# Seasonal Naive
+seasonal_naive:
+  seasonal_period: 24  # 24 hours for daily seasonality
+  
+# Moving Average
+moving_average:
+  window_size: 24  # 24-hour moving average

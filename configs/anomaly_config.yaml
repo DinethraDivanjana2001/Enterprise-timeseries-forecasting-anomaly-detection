@@ -1,0 +1,18 @@
+# Anomaly detection configuration
+
+# Method: 'zscore' or 'isolation_forest'
+method: "zscore"
+
+# Z-score method parameters
+zscore:
+  threshold: 3.0  # Number of standard deviations
+  rolling_window: 24  # Use rolling statistics (null for global statistics)
+
+# Isolation Forest method parameters
+isolation_forest:
+  contamination: 0.05  # Expected proportion of anomalies
+  random_state: 42
+  
+# Residual feature extraction
+residual_features:
+  window_size: 5  # Window for rolling statistics on residuals

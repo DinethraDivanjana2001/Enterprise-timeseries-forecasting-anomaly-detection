@@ -1,0 +1,17 @@
+# Dataset configuration
+dataset:
+  name: "electricity_load"
+  path: "data/electricity_load.csv"
+  timestamp_col: "timestamp"
+  value_col: "value"
+  
+# Data split configuration
+split:
+  train_end: "2014-12-31"
+  val_end: "2015-01-31"
+  test_end: null  # null means use all remaining data
+
+# Feature engineering
+features:
+  lags: [1, 2, 3, 6, 12, 24, 48, 168]  # 1h, 2h, 3h, 6h, 12h, 24h, 48h, 1week
+  rolling_windows: [6, 12, 24, 48]  # 6h, 12h, 24h, 48h rolling statistics
